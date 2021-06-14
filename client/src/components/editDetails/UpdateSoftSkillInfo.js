@@ -34,27 +34,6 @@ function UpdateSoftSkillInfo(props) {
     props.onChange(false);
   };
   const update = async () => {
-    // database
-    //   .collection("Skillsets")
-    //   .doc(app.auth().currentUser.uid)
-    //   .collection("SoftSkills")
-    //   .doc(t.id)
-    //   .update({
-    //     skill_name: updateSoftSkillInfo.skill_name,
-    //     rate: updateSoftSkillInfo.rate,
-    //     fav: updateSoftSkillInfo.fav,
-    //   })
-
-    //   .then(() => {
-    //     //setOpen(false);
-    //     console.log(updateSoftSkillInfo.fav);
-    //     props.onChange(false);
-    //     alert("updated");
-    //     props.getsoftskillinfo();
-    //   })
-    //   .catch((error) => {
-    //     console.log(error.message);
-    //   });
     const details = {
       skill_name: updateSoftSkillInfo.skill_name,
       rate: updateSoftSkillInfo.rate,
