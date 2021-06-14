@@ -1,6 +1,4 @@
-import firebase from 'firebase'
-
-
+import firebase from "firebase";
 var firebaseConfig = firebase.initializeApp({
   apiKey: "AIzaSyDsUXlick1r8r5g2OUczYLlZs1YrSjPJjo",
   authDomain: "project-workday.firebaseapp.com",
@@ -8,11 +6,11 @@ var firebaseConfig = firebase.initializeApp({
   storageBucket: "project-workday.appspot.com",
   messagingSenderId: "1020739224236",
   appId: "1:1020739224236:web:c5418d436dcb4a2fc35509",
-  measurementId: "G-QGKJW87ZKB"
-  });
+  measurementId: "G-QGKJW87ZKB",
+});
 
-var database=firebaseConfig.firestore()
-const app=firebaseConfig
-export const auth=app.auth()
-export  {app,database}
-
+const provider = new firebase.auth.GoogleAuthProvider();
+var database = firebaseConfig.firestore();
+const app = firebaseConfig;
+export const auth = app.auth();
+export { app, database, provider };
