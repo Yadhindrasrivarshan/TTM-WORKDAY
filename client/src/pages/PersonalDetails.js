@@ -35,29 +35,18 @@ function PersonalDetails() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(details);
-    const uid = "s";
+    const uid = app.auth().currentUser.uid;
     await axios
       .post(`http://localhost:5000/details/PersonalDetails/${uid}`, details)
       .then((res) => {
         console.log(res);
+        alert("Details submitted!");
       })
       .catch((e) => console.log(e));
-    // database
-    //   .collection("PersonalDetails")
-    //   .doc(app.auth().currentUser.uid)
-    //   .set(details)
-    //   .then((docRef) => {
-    //     alert("Your message has been submitted:+1:");
-    //     console.log("Document written with ID: ", docRef.id);
-    //   })
-    //   .catch((error) => {
-    //     alert(error.message);
-    //   });
     document.getElementById("form").reset();
   };
 
   return (
-    // <div style={{ padding: 16, margin: 'auto', maxWidth: 600 }}>
     <Container size="sm">
       <Typography variant="h5" align="center">
         Personal Details
