@@ -88,21 +88,6 @@ function SkillSet() {
     };
     setTodoList([...toDoList, taskDetails]);
 
-    // database.collection('details').doc('QTv6ThZefNifWJNSYabn').collection('SkillSet').doc('vRaye7JSuZwopewlc4FK').collection('TechSkill').add(taskDetails)
-    // // db.collection("tech_skill").add(taskDetails)
-    // .then((docRef)=>{alert("skill_name "+taskDetails.skill_name+"\nrate "+taskDetails.rate+"\nfav "+taskDetails.fav)});
-    // setOpen(false);
-    // database
-    //   .collection("Skillsets")
-    //   .doc(app.auth().currentUser.uid)
-    //   .collection("TechSkills")
-    //   .add(taskDetails)
-    //   .then(() => {
-    //     alert("TeamDetails have been submitted successfully 😁😎");
-    //   })
-    //   .catch((error) => {
-    //     alert(error.message);
-    //   });
     const uid = app.auth().currentUser.uid;
 
     await axios
@@ -158,18 +143,6 @@ function SkillSet() {
         console.log(res);
       })
       .catch((e) => console.log(e));
-    // database
-    //   .collection("Skillsets")
-    //   .doc(app.auth().currentUser.uid)
-    //   .collection("softSkills")
-    //   .add(taskDetails_s)
-    //   .then(() => {
-    //     alert("TeamDetails have been submitted successfully 😁😎");
-    //   })
-    //   .catch((error) => {
-    //     alert(error.message);
-    //   });
-    //arrow function with document as argument in firestore
     setOpens(false);
   };
 
@@ -215,15 +188,6 @@ function SkillSet() {
         console.log(res);
       })
       .catch((e) => console.log(e));
-    // database
-    //   .collection("Skillsets")
-    //   .doc(app.auth().currentUser.uid)
-    //   .collection("otherSkills")
-    //   .add(taskDetails_o)
-    //   .then(() => {})
-    //   .catch((error) => {
-    //     alert(error.message);
-    //   });
     setOpen_o(false);
   };
 
