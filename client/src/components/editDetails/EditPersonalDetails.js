@@ -60,15 +60,6 @@ function Demo() {
     getPersonalInfo();
   }, []);
 
-  // const getPersonalInfo = () => {
-  //   database
-  //     .collection("PersonalDetails")
-  //     .doc(app.auth().currentUser.uid)
-  //     .get()
-  //     .then((snapshot) => setPersonalInfo(snapshot.data()))
-  //     .catch((error) => console.log(error.message));
-  // };
-
   const getPersonalInfo = async () => {
     const uid = app.auth().currentUser.uid;
     await axios
@@ -86,16 +77,6 @@ function Demo() {
   };
   const handleUpdate = async (e) => {
     e.preventDefault();
-    // database
-    //   .collection("PersonalDetails")
-    //   .doc(app.auth().currentUser.uid)
-    //   .update(personalInfo)
-    //   .then(() => {
-    //     window.location.reload(false);
-    //   })
-    //   .catch((error) => {
-    //     alert(error.message);
-    //   });
     const uid = app.auth().currentUser.uid;
     await axios
       .put(`http://localhost:5000/details/PersonalDetails/${uid}`, personalInfo)
