@@ -131,3 +131,4 @@ function ViewSoftSkills() {
 }
 
 export default ViewSoftSkills;
+ 
