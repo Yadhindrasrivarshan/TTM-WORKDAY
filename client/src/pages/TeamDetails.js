@@ -125,16 +125,7 @@ class TeamDetails extends Component {
         DateOfJoining: this.state.DateOfJoining,
         PrevTeams: list1,
       };
-      // database
-      //   .collection("TeamDetails")
-      //   .doc("yWLgCpaoOANbGdEsqU5wBdgDo8w2")
-      //   .set(details)
-      //   .then(() => {
-      //     console.log("TeamDetails have been submitted successfully 😁😎");
-      //   })
-      //   .catch((error) => {
-      //     alert(error.message);
-      //   });
+
       const uid = app.auth().currentUser.uid;
       await axios
         .post(`http://localhost:5000/details/TeamDetails/${uid}`, details)
