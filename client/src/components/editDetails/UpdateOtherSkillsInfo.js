@@ -30,25 +30,6 @@ function UpdateOtherSkillsInfo(props) {
     props.onChange(false);
   };
   const update = async () => {
-    // database
-    //   .collection("Skillsets")
-    //   .doc(app.auth().currentUser.uid)
-    //   .collection("OtherSkills")
-    //   .doc(t.id)
-    //   .update({
-    //     skill_name: updateotherskillsinfo.skill_name,
-    //     rate: updateotherskillsinfo.rate,
-    //     fav: updateotherskillsinfo.fav,
-    //   })
-    //   .then(() => {
-    //     //setOpen(false);
-    //     props.onChange(false);
-    //     alert("updated");
-    //     props.getothernicalinfo();
-    //   })
-    //   .catch((error) => {
-    //     console.log(error.message);
-    //   });
     const details = {
       skill_name: updateotherskillsinfo.skill_name,
       rate: updateotherskillsinfo.rate,
