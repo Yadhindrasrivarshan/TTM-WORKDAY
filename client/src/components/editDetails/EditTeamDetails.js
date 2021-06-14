@@ -30,21 +30,7 @@ import {
   PeopleOutlineOutlined,
   Wc,
 } from "@material-ui/icons";
-import { useHistory } from "react-router";
-import Radio from "@material-ui/core/Radio";
-import RadioGroup from "@material-ui/core/RadioGroup";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import FormLabel from "@material-ui/core/FormLabel";
-import {
-  TextField,
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogContentText,
-  DialogTitle,
-} from "@material-ui/core";
-import Emoji from "@material-ui/icons/SentimentVerySatisfiedOutlined";
-import Rating from "@material-ui/lab/Rating";
+import { TextField } from "@material-ui/core";
 import DomainIcon from "@material-ui/icons/Domain";
 import { database, app } from "../../mockfirebase";
 //import EditTeamInfo from "../EditTeamInfo";
@@ -88,20 +74,6 @@ function TeamDetails() {
   useEffect(() => {
     getTeamInfo();
   }, []);
-  // const getTeamInfo = () => {
-  //   database
-  //     .collection("TeamDetails")
-  //     .doc(app.auth().currentUser.uid)
-  //     .get()
-  //     .then((snapshot) => {
-  //       const list = [];
-  //       setTeamInfo(snapshot.data());
-  //       const pteam = snapshot.data().PrevTeams;
-  //       list.push(pteam);
-  //       setPrevTeam(list);
-  //     })
-  //     .catch((error) => console.log(error.message));
-  // };
 
   const getTeamInfo = async () => {
     await axios
@@ -135,16 +107,6 @@ function TeamDetails() {
 
   const handleUpdate = async (e) => {
     e.preventDefault();
-    // database
-    //   .collection("TeamDetails")
-    //   .doc(app.auth().currentUser.uid)
-    //   .update(teamInfo)
-    //   .then(() => {
-    //     alert("Team Info updated!!");
-    //   })
-    //   .catch((error) => {
-    //     alert(error.message);
-    //});
     const uid = app.auth().currentUser.uid;
     await axios
       .put(`http://localhost:5000/details/TeamDetails/${uid}`, teamInfo)
