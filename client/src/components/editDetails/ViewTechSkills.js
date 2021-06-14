@@ -44,26 +44,6 @@ function ViewTechSkills() {
   useEffect(() => {
     getTechSkillsInfo();
   }, []);
-  // const getTechSkillsInfo = () => {
-  //   database
-  //     .collection("Skillsets")
-  //     .doc(app.auth().currentUser.uid)
-  //     .collection("TechSkills")
-  //     .get()
-  //     .then((querySnapshot) => {
-  //       const list = [];
-  //       querySnapshot.forEach((doc) => {
-  //         const data = doc.data();
-  //         list.push({ id: doc.id, ...data });
-  //       });
-  //       setTechSkillsInfo(list);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error.message);
-  //     });
-
-  //   console.log(techSkillsInfo);
-  // };
 
   const getTechSkillsInfo = async () => {
     const list = [];
