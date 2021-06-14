@@ -40,27 +40,7 @@ function UpdateTechSkillsInfo(props) {
       fav: updatetechskillsinfo.fav,
       idd: t.id,
     };
-    // database
-    //   .collection("Skillsets")
-    //   .doc(app.auth().currentUser.uid)
-    //   .collection("TechSkills")
-    //   .doc(t.id)
-    //   .update({
-    //     skill_name: updatetechskillsinfo.skill_name,
-    //     rate: updatetechskillsinfo.rate,
-    //     fav: updatetechskillsinfo.fav,
-    //   })
 
-    //   .then(() => {
-    //     //setOpen(false);
-    //     console.log(updatetechskillsinfo.fav);
-    //     props.onChange(false);
-    //     alert("updated");
-    //     props.gettechnicalinfo();
-    //   })
-    //   .catch((error) => {
-    //     console.log(error.message);
-    //   });
     const uid = app.auth().currentUser.uid;
     await axios
       .put(`http://localhost:5000/details/TechnicalSkills/${uid}`, details)
