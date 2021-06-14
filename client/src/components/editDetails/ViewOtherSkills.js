@@ -127,7 +127,7 @@ function ViewOtherSkills() {
           getothernicalinfo={getOtherSkillsInfo}
           onChange={handleClose}
         />
-      )}
+      )} 
     </>
   );
 }
